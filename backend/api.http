@@ -1,0 +1,41 @@
+GET http://localhost:4000
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://localhost:4000/users/register
+Content-Type: application/json
+
+{
+  "username": "IOsonoTAN",
+  "password": "1212312121",
+  "email": "iosonotan@gmail.com",
+  "name": "Krissada",
+  "surname": "Boontrigratn"
+}
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+  "username": "IOsonoTAN",
+  "password": "1212312121"
+}
+
+###
+
+GET http://localhost:4000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTI1NTc4ODcsImV4cCI6MTYxMjU1Nzk0NywiYXVkIjoiNjAxZDY2M2MxMTZhMmQ3NDcxMWIwZGQyIn0.avM63wTXGN-Ie1n23uH_az73IHo9nko7IBuxQwIT40w
+
+###
+
+POST http://localhost:4000/users/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTI1NTYxNjIsImV4cCI6MTYxMjU1OTc2MiwiYXVkIjoiNjAxZDY2M2MxMTZhMmQ3NDcxMWIwZGQyIn0.IIq6JTwx1oz8HFEh3vVc_58yS-dvnjFaVD5afNTSrkQ"
+}
